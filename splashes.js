@@ -6,9 +6,6 @@ for (let i = 1; i <= 7; i++) {
   splashes[`w${i}`] = `wings/w${i}.png`;
 }
 
-left.src = splashes.w1;
-right.src = splashes.w2;
-
 let width = 2560;
 let height = 1440;
 let mid = 80;
@@ -45,6 +42,9 @@ right.style.clipPath = `path('${makeRightPath()}')`;
 
 let leftSelect = document.getElementById('left-select');
 let rightSelect = document.getElementById('right-select');
+
+left.src = splashes[leftSelect.value];
+right.src = splashes[rightSelect.value];
 
 leftSelect.addEventListener('change', function(e) {
   console.log(e);
