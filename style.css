@@ -1,5 +1,7 @@
 body {
-  background: black;
+  background: #191917;
+  margin: 0;
+  padding: 0;
 }
 
 .splash-container {
@@ -7,6 +9,15 @@ body {
   width: 2560px;
   height: 1440px;
   overflow: hidden;
+}
+
+.edges {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2560px;
+  height: 1440px;
+  background: linear-gradient(to bottom right, #7c5538, #432412);
 }
 
 .splash {
@@ -23,4 +34,18 @@ body {
   transform: translate(-50%, -50%);
   top: calc(1440px/2);
   left: calc(2560px/2);
+}
+
+.controls {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
+.controls.hidden {
+  opacity: 0;
+}
+
+.controls.hidden:hover {
+  opacity: 1;
 }

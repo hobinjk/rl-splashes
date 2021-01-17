@@ -4,29 +4,33 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <select id="left-select">
-      <option value="w1" selected>W1</option>
-      <option value="w2">W2</option>
-      <option value="w3">W3</option>
-      <option value="w4">W4</option>
-      <option value="w5">W5</option>
-      <option value="w6">W6</option>
-      <option value="w7">W7</option>
-    </select>
-    <select id="right-select">
-      <option value="w1">W1</option>
-      <option value="w2" selected>W2</option>
-      <option value="w3">W3</option>
-      <option value="w4">W4</option>
-      <option value="w5">W5</option>
-      <option value="w6">W6</option>
-      <option value="w7">W7</option>
-    </select>
+    <div class="controls">
+      <select id="left-select">
+        <option value="w1" selected>W1</option>
+        <option value="w2">W2</option>
+        <option value="w3">W3</option>
+        <option value="w4">W4</option>
+        <option value="w5">W5</option>
+        <option value="w6">W6</option>
+        <option value="w7">W7</option>
+      </select>
+      <select id="right-select">
+        <option value="w1">W1</option>
+        <option value="w2" selected>W2</option>
+        <option value="w3">W3</option>
+        <option value="w4">W4</option>
+        <option value="w5">W5</option>
+        <option value="w6">W6</option>
+        <option value="w7">W7</option>
+      </select>
+      <input id="hide" type="button" value="hide"></input>
+    </div>
 
     <div class="splash-container">
       <img class="left splash" />
       <img class="right splash" />
       <img class="rl" src="rl-logo.png" />
+      <!-- <div class="edges"></div> -->
     </div>
     <script src="splashes.js"></script>
   </body>

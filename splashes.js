@@ -1,5 +1,6 @@
 let left = document.querySelector('.left');
 let right = document.querySelector('.right');
+let edges = document.querySelector('.edges');
 
 const splashes = {};
 for (let i = 1; i <= 7; i++) {
@@ -37,11 +38,31 @@ function makeRightPath() {
   ].join(' ');
 }
 
+// function makeEdgesPath() {
+//   return [
+//     'M', centerAdjustX, pad,
+//     'L', centerAdjustX + width * (1 - angleRatio) - mid / 2, pad,
+//     'L', centerAdjustX + width * angleRatio - mid / 2, height - pad,
+//     'L', centerAdjustX, height - pad,
+//     'L', centerAdjustX, pad,
+//     'M', -centerAdjustX + width * angleRatio + mid / 2, height - pad,
+//     'L', -centerAdjustX + width * (1 - angleRatio) + mid / 2, pad,
+//     'L', -centerAdjustX + width, pad,
+//     'L', -centerAdjustX + width, height - pad,
+//     'L', -centerAdjustX + width * angleRatio + mid / 2, height - pad,
+//   ].join(' ');
+// }
+
 left.style.clipPath = `path('${makeLeftPath()}')`;
 right.style.clipPath = `path('${makeRightPath()}')`;
 
+// centerAdjustX = 0;
+// edges.style.clipPath = `path('${makeEdgesPath()}')`;
+
+let controls = document.querySelector('.controls');
 let leftSelect = document.getElementById('left-select');
 let rightSelect = document.getElementById('right-select');
+let hide = document.getElementById('hide');
 
 left.src = splashes[leftSelect.value];
 right.src = splashes[rightSelect.value];
@@ -54,4 +75,9 @@ leftSelect.addEventListener('change', function(e) {
 rightSelect.addEventListener('change', function(e) {
   console.log(e);
   right.src = splashes[rightSelect.value];
+});
+
+hide.addEventListener('click', function() {
+  hide.style.display = 'none';
+  controls.classList.add('hidden');
 });
