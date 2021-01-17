@@ -2,6 +2,13 @@ body {
   background: black;
 }
 
+.splash-container {
+  position: relative;
+  width: 2560px;
+  height: 1440px;
+  overflow: hidden;
+}
+
 .splash {
   position: absolute;
   top: 0;
