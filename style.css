@@ -1,0 +1,19 @@
+body {
+  background: black;
+}
+
+.splash {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2560px;
+  height: 1440px;
+}
+
+.rl {
+  position: absolute;
+  width: 340px;
+  transform: translate(-50%, -50%);
+  top: calc(1440px/2);
+  left: calc(2560px/2);
+}
